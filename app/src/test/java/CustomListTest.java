@@ -43,7 +43,7 @@ public class CustomListTest {
     }
 
     @Test
-    void testCountCities(){
+    public void testCountCities(){
         assertEquals(0,list.countCities());
 
         City city1 = new City("YellowKnife","Northwest Territories");
