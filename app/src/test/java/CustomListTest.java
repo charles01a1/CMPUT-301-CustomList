@@ -34,11 +34,12 @@ public class CustomListTest {
 
     @Test
     public void deleteCityTest(){
+        int listSize = list.getCount();
         City city = new City("Halifax","NS");
         list.add(city);
-        int listSize = list.getCount();
+        assertEquals(list.getCount(),listSize+1);
         list.deleteCity(city);
-        assertEquals(list.getCount(),listSize-1);
+        assertEquals(list.getCount(),listSize);
 
     }
 
