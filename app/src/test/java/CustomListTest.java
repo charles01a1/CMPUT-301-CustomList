@@ -16,27 +16,6 @@ public class CustomListTest {
     public void createList(){
         list = new CustomList(null,new ArrayList<City>());
     }
-    @Test
-    void testCountCities(){
-        assertEquals(0,list.countCities());
-
-        City city1 = new City("YellowKnife","Northwest Territories");
-        list.add(city1);
-        assertEquals(1,list.countCities());
-
-        City city2 = new City("Cold Lake","Alberta");
-        list.add(city2);
-        assertEquals(2,list.countCities());
-
-        City city3 = new City("Calgary","Alberta");
-        list.add(city3);
-        assertEquals(3,list.countCities());
-
-        list.deleteCity(city3);
-
-        assertEquals(2,list.countCities());
-
-    }
 
     @Test
     public void addCityTest(){
@@ -63,4 +42,25 @@ public class CustomListTest {
 
     }
 
+    @Test
+    void testCountCities(){
+        assertEquals(0,list.countCities());
+
+        City city1 = new City("YellowKnife","Northwest Territories");
+        list.addCity(city1);
+        assertEquals(1,list.countCities());
+
+        City city2 = new City("Cold Lake","Alberta");
+        list.addCity(city2);
+        assertEquals(2,list.countCities());
+
+        City city3 = new City("Calgary","Alberta");
+        list.addCity(city3);
+        assertEquals(3,list.countCities());
+
+        list.deleteCity(city3);
+
+        assertEquals(2,list.countCities());
+
+    }
 }
