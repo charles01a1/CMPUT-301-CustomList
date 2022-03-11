@@ -36,7 +36,7 @@ public class CustomListTest {
     public void deleteCityTest(){
         City city = new City("Halifax","NS");
         list.add(city);
-        assertEquals(true,list.hasCity(city)));
+        assertEquals(true,list.hasCity(city));
         list.deleteCity(city);
         assertEquals(false,list.hasCity(city));
 
